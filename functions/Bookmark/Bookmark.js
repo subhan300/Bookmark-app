@@ -40,11 +40,11 @@ const resolvers = {
         console.log(result.data.ts,"yeh dekh aya k nahi")
 
         return result.data.map(d=>{
-          return {
+          return ({
             id: d.ref.id,
             name: d.data.name,
             url: d.data.url
-          }
+          })
         })
       }catch(error){console.log(error,"error>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")}
     }
